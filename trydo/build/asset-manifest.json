@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/tatoos/static/css/main.7c421fc9.chunk.css",
+    "main.js": "/tatoos/static/js/main.a4144dff.chunk.js",
+    "main.js.map": "/tatoos/static/js/main.a4144dff.chunk.js.map",
+    "runtime~main.js": "/tatoos/static/js/runtime~main.b3943214.js",
+    "runtime~main.js.map": "/tatoos/static/js/runtime~main.b3943214.js.map",
+    "static/css/2.067c5a5e.chunk.css": "/tatoos/static/css/2.067c5a5e.chunk.css",
+    "static/js/2.1d17a076.chunk.js": "/tatoos/static/js/2.1d17a076.chunk.js",
+    "static/js/2.1d17a076.chunk.js.map": "/tatoos/static/js/2.1d17a076.chunk.js.map",
+    "index.html": "/tatoos/index.html",
+    "precache-manifest.8d9151e6ba63c814087a0c39014993eb.js": "/tatoos/precache-manifest.8d9151e6ba63c814087a0c39014993eb.js",
+    "service-worker.js": "/tatoos/service-worker.js",
+    "static/css/2.067c5a5e.chunk.css.map": "/tatoos/static/css/2.067c5a5e.chunk.css.map",
+    "static/css/main.7c421fc9.chunk.css.map": "/tatoos/static/css/main.7c421fc9.chunk.css.map",
+    "static/media/index.scss": "/tatoos/static/media/slick.f97e3bbf.svg"
+  }
+}

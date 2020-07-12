@@ -36,11 +36,11 @@ const PortfolioList = [
     }
 ]
 
-class Portfolio extends Component{
-    render(){
+class Portfolio extends Component {
+    render() {
         let title = 'Our Works',
-        description = 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.';
-        return(
+            description = 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.';
+        return (
             <React.Fragment>
                 <div className="portfolio-wrapper">
                     <div className="container">
@@ -55,7 +55,7 @@ class Portfolio extends Component{
                     </div>
                     <div className="portfolio-slick-activation mt--70 mt_sm--40">
                         <Slider {...portfolioSlick2}>
-                            {PortfolioList.map((value , index) => (
+                            {PortfolioList.map((value, index) => (
                                 <div className="portfolio" key={index}>
                                     <div className="thumbnail-inner">
                                         <div className={`thumbnail ${value.image}`}></div>

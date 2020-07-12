@@ -1,72 +1,71 @@
 import React, { Component } from "react";
-import {FaTwitter ,FaInstagram ,FaFacebookF , FaLinkedinIn } from "react-icons/fa";
-import { FiX , FiMenu} from "react-icons/fi";
+import { FaTwitter, FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FiX, FiMenu } from "react-icons/fi";
 import Scrollspy from 'react-scrollspy'
 
 const SocialShare = [
-    {Social: <FaFacebookF /> , link: 'https://www.facebook.com/'},
-    {Social: <FaLinkedinIn /> , link: 'https://www.linkedin.com/'},
-    {Social: <FaInstagram /> , link: 'https://www.instagram.com/'},
-    {Social: <FaTwitter /> , link: 'https://twitter.com/'},
+    { Social: <FaFacebookF />, link: 'https://www.facebook.com/' },
+    { Social: <FaInstagram />, link: 'https://www.instagram.com/' },
+    { Social: <FaTwitter />, link: 'https://twitter.com/' },
 ]
-class HeaderThree extends Component{
+class HeaderThree extends Component {
     constructor(props) {
         super(props);
         this.menuTrigger = this.menuTrigger.bind(this);
         this.CLoseMenuTrigger = this.CLoseMenuTrigger.bind(this);
         this.stickyHeader = this.stickyHeader.bind(this);
 
-       //  this.subMetuTrigger = this.subMetuTrigger.bind(this);
-        window.addEventListener('load', function() {
+        //  this.subMetuTrigger = this.subMetuTrigger.bind(this);
+        window.addEventListener('load', function () {
             console.log('All assets are loaded');
         })
-        
+
     }
     menuTrigger() {
         document.querySelector('.header-wrapper').classList.toggle('menu-open')
     }
-    
+
     CLoseMenuTrigger() {
         document.querySelector('.header-wrapper').classList.remove('menu-open')
     }
 
-    stickyHeader () {}
+    stickyHeader() { }
 
-    render(){
+    render() {
 
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             var value = window.scrollY;
             if (value > 100) {
                 document.querySelector('.header--fixed').classList.add('sticky')
-            }else{
+            } else {
                 document.querySelector('.header--fixed').classList.remove('sticky')
             }
         });
 
         var elements = document.querySelectorAll('.has-droupdown > a');
-        for(var i in elements) {
-            if(elements.hasOwnProperty(i)) {
-                elements[i].onclick = function() {
+        for (var i in elements) {
+            if (elements.hasOwnProperty(i)) {
+                elements[i].onclick = function () {
                     this.parentElement.querySelector('.submenu').classList.toggle("active");
                     this.classList.toggle("open");
                 }
             }
         }
-        const { logo, color='default-color' } = this.props;
+        const { logo, color = 'default-color' } = this.props;
         let logoUrl;
-        if(logo === 'light'){
+        if (logo === 'light') {
             logoUrl = <img src="/assets/images/logo/logo-light.png" alt="Digital Agency" />;
-        }else if(logo === 'dark'){
+        } else if (logo === 'dark') {
             logoUrl = <img src="/assets/images/logo/logo-dark.png" alt="Digital Agency" />;
-        }else if(logo === 'symbol-dark'){
+        } else if (logo === 'symbol-dark') {
             logoUrl = <img src="/assets/images/logo/logo-symbol-dark.png" alt="Digital Agency" />;
-        }else if(logo === 'symbol-light'){
+        } else if (logo === 'symbol-light') {
             logoUrl = <img src="/assets/images/logo/logo-symbol-light.png" alt="Digital Agency" />;
-        }else{
+        } else {
             logoUrl = <img src="/assets/images/logo/logo.png" alt="Digital Agency" />;
         }
-        
-        return(
+
+        return (
             <header className={`header-area header-style-two header--fixed ${color}`}>
                 <div className="header-wrapper">
                     <div className="header-left d-flex align-items-center">
@@ -76,7 +75,7 @@ class HeaderThree extends Component{
                             </a>
                         </div>
                         <nav className="mainmenunav d-lg-block ml--50">
-                            <Scrollspy className="mainmenu" items={['home','about','service','portfolio','blog','contact']} currentClassName="is-current" offset={-200}>
+                            <Scrollspy className="mainmenu" items={['home', 'about', 'service', 'portfolio', 'blog', 'contact']} currentClassName="is-current" offset={-200}>
                                 <li><a href="#home">Home</a></li>
                                 <li><a href="#about">About</a></li>
                                 <li><a href="#service">Service</a></li>
@@ -89,7 +88,7 @@ class HeaderThree extends Component{
                     <div className="header-right">
                         <div className="social-share-inner">
                             <ul className="social-share social-style--2 color-black d-flex justify-content-start liststyle">
-                                {SocialShare.map((val , i) => (
+                                {SocialShare.map((val, i) => (
                                     <li key={i}><a href={`${val.link}`}>{val.Social}</a></li>
                                 ))}
                             </ul>
